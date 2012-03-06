@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Getting Started with deck.js</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700' rel='stylesheet' type='text/css'>
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/yii.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+	
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide red" id="title-slide">
+    <img src="../yii-bw-inthemix.png" alt="Yii framework" id="logo" />
+</section>
+
+<section class="slide red" id="four-to-the-floor">
+    <h2>PHP5 framework best for developing Web 2 Applications</h2>
+	<ul class="heavy">
+		<li>MVC</li>
+		<li>OOP</li>
+		<li>DRY</li>
+        <li>BSD</li>
+	</ul>
+</section>
+
+<section class="slide oil" id="history">
+    <h2>Historic</h2>
+    <ul>
+        <li>Yii 1.0 December 3, 2008</li>
+        <li>Yii 1.1.0  January 10, 2010</li>
+        <li>Yii 2.0 alpha verions released March 2012 (not guarantee)</li>
+    </ul>
+    <div>
+        <h3>Development team</h3>
+        <ul>
+            <li>Current Development team: 7 members</li>
+            <li>~50 Translator (+15 languages)</li>
+        </ul>
+        <h4>Priority</h4>
+        <ul>
+            <li>Stability</li>
+            <li>Reliability</li>
+            <li>Consistent style</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide" id="good-parts">
+	<h2>Another PHP framework...</h2>
+    <ul class="heavy">
+        <li>Prado, the major source of ideas for Yii. (2004 nothing was out there)</li>
+        <li>Ruby on Rails, Convention over configuration, active record design pattern for its ORM layer. (...)
+        <li>Symfony, filter design and plug-in architecture</li>
+        <li>Joomla, modular design and message translation scheme</li>
+        <li>Java, C# (...) </li>
+    </ul>
+</section>
+
+<section class="slide" id="features">
+	<h2>Everybody loves features!!!</h2>
+    <ul>
+        <li>DAO, Query Builder, Active Record, DB Migration</li>
+        <li>jQuery integration</li>
+        <li>RBAC, Authentication and authorization.</li>
+        <li>Internationalization (I18N) and localization (L10N)</li>
+        <li>Layered caching scheme</li>
+        <li>Error handling and logging</li>
+        <li>Security</li>
+        <li>Unit and functionality testing ( PPHUnit &amp; Selenium )</li>
+        <li>Automatic code generation</li>
+    </ul>
+</section>
+
+<section class="slide" id="bootstrap">
+    <h2>Bootstrap</h2>
+	<pre><code>http://example.com/<span class="h-index">index.php</span><span class="h-request">?r=<span class="h-controller">post</span>/<span class="h-action">show</span>&id=1</span> <span class="h-url">(http://www.example.com<span class="h-request">/yii-rocks</span>)</span></pre></code>
+    <div class="medium">
+        <div class="slide box" id="index">index.php</div>
+        <div class="slide box" id="application">
+            <div class="head">application<span class="more"> &lt;&nbsp; </span></div>
+            <div class="slide helper" id="request">request</div>
+            <div class="slide helper" id="urlmanager">urlmanager</div>
+        </div>
+        <div class="slide box" id="controller">
+            <div>controller</div>
+            <ul>
+            <li class="slide" id="filter">filters</li>
+            <li class="slide" id="action">action</li>
+            </ul>
+        </div>
+        <div class="slide box" id="model">model</div>
+        <div class="slide box" id="view">
+            <div class="head">view<span class="more"> {&nbsp;</span></div>
+            <div class="slide helper">widget</div>
+            <div class="slide helper">layout</div>
+        </div>
+    </div>
+</section>
+
+<section class="slide" id="actionshow">
+	<h2>Show <span class="blur">some</span> action</h2>
+    <pre><code>public function <span class="h-action">actionShow($id)</span>
+{
+    <span class="h-model">$model = Post::model()-&gt;findByPk($id);</span>
+    <span class="h-exception">if($model == null)
+         throw new CHttpException('404', 'Post not found');</span>
+    <span class="h-view">$this-&gt;render('view', array('post'=&gt;$model));</span>
+}</code></pre>
+    <div class="slide" id="model"></div>
+    <div class="slide" id="exception"></div>
+    <div class="slide" id="view"></div>
+</section>
+
+<section class="slide" id="community">
+	<h2>I want you</h2>
+</section>
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+<!--<script src="../jquery.airport-1.1.source.js"></script>-->
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+    /**var bgColors = [];
+    var c=0;
+    $('.slide').each(function() {
+        bgColors[c]=$(this).css('background-color');
+        c++;
+    });**/
+    $(document).bind('deck.change',function(event,from,to){
+
+    });
+});
+</script>
+
+</body>
+</html>

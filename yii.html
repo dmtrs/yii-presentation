@@ -1,0 +1,129 @@
+<p>/** 
+ * TODO: performance??
+ */</p>
+
+<h1>Yii Presentation 2012</h1>
+
+<blockquote>
+  <p>A high performance PHP5 framework best for developing Web 2.0 Applications</p>
+</blockquote>
+<h2>What?</h2>
+
+<ul>
+<li>MVC architecture</li>
+<li>Purely OOP ( CComponent-based )</li>
+<li>Promote DRY design</li>
+<li>BSD License</li>
+</ul>
+
+<h1>History</h1>
+
+<ul>
+<li>Started by Qiang Xue in January 1, 2008</li>
+<li>Yii 1.0 released December 3, 2008</li>
+<li>Yii 1.1.0  release January 10, 2010</li>
+<li><p>Yii 2.0 alpha verions released March 2012 (not guarantee)</p>
+
+<h2>Yii team</h2></li>
+<li><p>Current Development team: 7 members</p></li>
+<li><p>~50 Translator (+15 languages)</p>
+
+<h3>Priority</h3></li>
+<li><p>Code stability.</p></li>
+<li>Code reliability.</li>
+<li>Consistent style.</li>
+</ul>
+
+<h1>Why another framework? Reinventing the wheel?</h1>
+
+<ul>
+<li>Prado, the major source of ideas for Yii. (2004 nothing was out there)</li>
+<li>Ruby on Rails, Convention over configuration, active record design pattern for its ORM layer. (...)
+<blockquote>
+  <p>has sensible defaults for almost all aspects of wiring your application. If you follow the prescribed conventions, you will write less code and spend less time developing your application.</li>
+<li>Symfony, filter design and plug-in architecture</li>
+<li>Joomla, modular design and message translation scheme</li>
+<li>Java, C# (...) </li>
+</ul></p>
+
+<h1>I &lt;3 features, do you?</h1>
+</blockquote>
+
+<ul>
+<li>DAO, Query Builder, Active Record, DB Migration
+<blockquote>
+  <p>Allows developers to model database data in terms of objects and avoid the tedium and complexity of writing repetitive SQL statements.</li>
+<li>jQuery integration
+Integrated with jQuery, Yii comes with a set of AJAX-enabled widgets, such as auto-complete input field, treeview, data grid, which enables writing highly efficient and versatile user interface extremely simple. </li>
+<li>RBAC, Authentication and authorization.</li>
+<li>Internationalization (I18N) and localization (L10N)
+Yii supports message translation, date and time formatting, number formatting, and interface localization.</li>
+<li>Layered caching scheme
+Yii supports data caching, page caching, fragment caching and dynamic content. The storage medium of caching can be changed easily without touching the application code.</li>
+<li>Error handling and logging
+Errors are handled and presented more nicely, and log messages can be categorized, filtered and routed to different destinations.</li>
+<li>Security 
+Measures to help prevent your Web applications from attacks such as SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and cookie tampering.</li>
+<li>Unit and functionality testing ( PPHUnit &amp; Selenium )</li>
+<li>Automatic code generation</li>
+</ul>
+
+<p>++extra++
+- Friendly with third-party code ( code from PEAR or Zend Framework ) 
+- Form input and validation ( easy and safe, numerous helper methods and widgets to simplify the task for form input and validation )
+- Skinning and Theming ( quickly switch the outlook of a Yii-power website )</p>
+</blockquote></p>
+
+<h1>Community</h1>
+
+<ul>
+<li>Forum</li>
+<li>Wiki</li>
+<li>IRC channel</li>
+<li><p>yiipodcast</p>
+
+<h2>Quotes</h2></li>
+<li><p>"There are not so many examples" (heard)</p></li>
+<li>"Community is not a helpdesk"</li>
+<li>"From svn to git" story</li>
+</ul>
+
+<h1>Everybody is here for some code</h1>
+
+<p>~~~
+[php]
+class PostController exntends Controller
+{
+    ...
+    public function actionShow($id)
+    {
+        $post = Post::model()->findByPk($id);
+        if($post == null)
+            throw new CHttpException('404', 'Post not found');</p>
+
+<pre><code>    $this-&gt;render('view', array(
+        'model'=&gt;$post));
+}
+...
+</code></pre>
+
+<p>}
+~~~</p>
+
+
+
+<pre><code>class PostController exntends Controller
+{
+    ...
+    public function actionShow($id)
+    {
+        $post = Post::model()-&gt;findByPk($id);
+        if($post == null)
+             throw new CHttpException('404', 'Post not found');
+
+       $this-&gt;render('view', array(
+            'model'=&gt;$post));
+    }
+    ...
+}
+</code></pre>
