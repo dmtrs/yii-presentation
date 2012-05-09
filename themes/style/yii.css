@@ -127,6 +127,10 @@ ul.heavy li {
 
 .on-slide-action #bootstrap .url { color: #D95D30; }
 .on-slide-action #bootstrap .url .h-action { color: #F0F0F0; }
+
+.on-slide-model #bootstrap .url { color: #D95D30; }
+.on-slide-model #bootstrap .url .h-params { color: #F0F0F0; }
+
 .on-slide-action #bootstrap .url .actionshow { display: inline; }
 .on-slide-action #bootstrap .url .htt.urlquest { display: none; }
 

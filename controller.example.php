@@ -8,7 +8,7 @@ class PostController extends CController
             throw new CHttpException(404,'Oops!');
         
         $this->render('view',array(
-            'post' => $model
+            'p' => $model
         ));
     }
 }

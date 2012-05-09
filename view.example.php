@@ -1,6 +1,6 @@
-<h2><?php echo $post->title; ?></h2>
+<h2><?php echo $p->title; ?></h2>
 <?php
-echo CHtml::link($post->author->fullname, $post->author->url);
+echo CHtml::link($p->author->fullname, $p->author->url);
 $this->beginWidget('CMarkDown');
-echo $post->content;
+echo $p->content;
 $this->endWidget();
