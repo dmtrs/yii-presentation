@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url('advent400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Advent Pro Bold'), local('AdventPro-Bold'), url('advent700.ttf') format('truetype');
+}

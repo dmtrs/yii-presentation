@@ -101,8 +101,8 @@
 </section>
 
 <section class="slide" id="bootstrap">
-    <h2>Bootstrap</h2>
-	<pre><code>http://example.com/<span class="h-index">index.php</span><span class="h-request">?r=<span class="h-controller">post</span>/<span class="h-action">show</span>&id=1</span> <span class="h-url">(http://www.example.com<span class="h-request">/1/yii-rocks</span>)</span></pre></code>
+	<h2 class="url" >http://bootstrap.yii/<span class="h-requesturi"><span class="h-index">index.php</span><span class="h-request">?r=<span class="h-controller">post</span>/<span class="h-action">show</span>&id=1</span> <span class="h-url">(<span class="h-request">/1/yii-rocks</span>)</span></span></h2>
+    <div class="slide" id="requesturi"></div>
     <div class="medium">
         <div class="slide box" id="index"><span>index</span><span class="helper" style="margin-left:0px;">.php</span></div>
         <div class="slide box" id="application">
@@ -128,33 +128,39 @@
 </section>
 
 <section class="slide" id="actionshow">
-	<h2>Show <span class="blur">some</span> action</h2>
-    <pre><code>class PostController extends CController
-{
-  public function <span class="h-action">actionShow($id)</span>
-  {
-    <span class="h-model">$model = Post::model()-&gt;findByPk($id);</span>
-    <span class="h-exception">if($model == null)
-      throw new CHttpException('404', 'Oops!');</span>
+	<h2 class="invert">Show <span class="white">some code in</span> action</h2>
+    <pre>
+<span class="Type">class</span> PostController <span class="Type">extends</span> CController
+<span class="Special">{</span>
+    <span class="Type">public</span> <span class="PreProc">function</span> actionShow<span class="Special">(</span><span class="Statement">$</span><span class="Identifier">id</span><span class="Special">)</span>
+    <span class="Special">{</span>
+        <span class="Statement">$</span><span class="Identifier">model</span> <span class="Statement">=</span> Post<span class="Statement">::</span>model<span class="Special">()</span><span class="Type">-&gt;</span>findByPk<span class="Special">(</span><span class="Statement">$</span><span class="Identifier">id</span><span class="Special">)</span>;
+        <span class="Statement">if</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">model</span><span class="Statement">===</span><span class="Type">null</span><span class="Special">)</span>
+            <span class="Statement">throw</span> <span class="PreProc">new</span> CHttpException<span class="Special">(</span><span class="Constant">404</span>,'<span class="Constant">Oops!</span>'<span class="Special">)</span>;
 
-    <span class="h-view">$this-&gt;render('view', array('post'=&gt;$model));</span>
-  }
-}</code></pre>
-    <div class="slide" id="model"></div>
-    <div class="slide" id="exception"></div>
-    <div class="slide" id="view"></div>
-    <pre id="view"><code>&lt;h1&gt;&lt;?php echo $post-&gt;title; ?&gt;&lt;/h1&gt;
-    &lt;?php echo CHtml::link($post-&gt;author-&gt;username,
-        $post-&gt;author-&gt;url,
-        array('class'=>'author')); ?&lt;
-    CHtml::link(
-    </pre></code>
+        <span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>render<span class="Special">(</span>'<span class="Constant">view</span>',<span class="Type">array</span><span class="Special">(</span>
+            '<span class="Constant">p</span>' <span class="Statement">=</span><span class="Statement">&gt;</span> <span class="Statement">$</span><span class="Identifier">model</span>
+        <span class="Special">))</span>;
+    <span class="Special">}</span>
+<span class="Special">}</span></pre>
+</section>
+
+<section class="slide" id="renderView">
+	<h2>View</h2>
+<pre>
+<span class="Identifier">&lt;</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><span class="Special">&lt;?php</span> <span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span><span class="Identifier">title</span>; <span class="Special">?&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">h2</span><span class="Identifier">&gt;</span>
+<span class="Special">&lt;?php</span>
+<span class="PreProc">echo</span> CHtml<span class="Statement">::</span><span class="Identifier">link</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span>author<span class="Type">-&gt;</span>name,<span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span>author<span class="Type">-&gt;</span>url<span class="Special">)</span>;
+
+<span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>beginWidget<span class="Special">(</span>'<span class="Constant">CMarkDown</span>'<span class="Special">)</span>;
+<span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span><span class="Identifier">content</span>;
+<span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>endWidget<span class="Special">()</span>;
+</pre>
 </section>
 
 <section class="slide" id="community">
 	<h2>You will not be alone</h2>
     <div id="resources">
-        <h3>Resources</h3>
         <ul class="medium">
             <li>Forum</li>
             <li>Freenode #yii</li>
