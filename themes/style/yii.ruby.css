@@ -1,0 +1,139 @@
+body { 
+    font-family: 'Advent Pro', sans-serif;
+}
+.white {
+    color: #FBF8FF;
+}
+.blur { 
+    color: #9C8878;
+}
+.slide h2 { 
+    color: #CFCAAA;
+    border-bottom: 3px solid #9C8878;
+}
+#logo {
+    margin: 260px auto 1em;
+    width: 668px;
+    height: 138px;
+}
+ul.small {
+    font-size: 80px;
+    font-weight: 700;
+    list-style: none;
+    max-height: 560px;
+    margin:  0 auto 0;
+}
+ul.small li {
+    line-height: 70px;
+    padding: 0px;
+}
+ul.medium {
+    font-size: 120px;
+    font-weight: 700;
+    list-style: none;
+    max-height: 560px;
+    margin:  0 auto 0;
+}
+ul.medium li {
+    line-height: 100px;
+    padding: 0px;
+}
+
+ul.heavy {
+    font-size: 180px;
+    font-weight: 700;
+    list-style: none;
+    width: 300px;
+    height: 560px;
+    margin:  0 auto 0;
+}
+ul.heavy li {
+    line-height: 140px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.medium .box { 
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 100px;
+}
+.box .head { 
+    float: left;
+}
+.box .helper {
+    font-size: 60px;
+    line-height: 50px;
+    margin-left: 0.5em;
+}
+.box ul {    
+    font-size: 40px;
+    line-height: 35px;
+    margin-bottom: 0;
+    
+}
+.box li { 
+    padding: 5px;
+}
+.deck-container {
+    background: #992435;
+    color: #FBF8FF;
+}
+.deck-container pre { 
+    background: #262E3B;
+}
+.deck-container h2 {
+}
+.deck-container h3 { 
+}
+
+/** the part we rock **/
+.h-url { display:none;}
+.actionshow { display: none; }
+
+.on-slide-index #bootstrap pre { color: #9C8878; }
+.on-slide-index #bootstrap pre .h-request { color: #CFCAAA; }
+.on-slide-index #bootstrap pre .h-index { color: #FBF8FF; }
+
+.on-slide-application #bootstrap pre { color: #9C8878; }
+.on-slide-application #bootstrap pre .h-request { color: #CFCAAA; }
+.on-slide-application #bootstrap pre .h-index { color: #FBF8FF; }
+.on-slide-application #bootstrap .more { display: none; }
+
+.on-slide-request #bootstrap pre { color: #9C8878; }
+.on-slide-request #bootstrap pre .h-request { color: #FBF8FF; }
+/**.on-slide-request #bootstrap pre .h-index { color: #9C8878; }**/
+
+.on-slide-urlmanager #bootstrap pre { color: #9C8878; }
+.on-slide-urlmanager #bootstrap pre .h-request { color: #FBF8FF; }
+/**.on-slide-urlmanager #bootstrap pre .h-index { color: #9C8878; }**/
+.on-slide-urlmanager #bootstrap pre .h-url { display: inline; }
+
+.on-slide-controller #bootstrap pre { color: #9C8878; }
+.on-slide-controller #bootstrap pre .h-controller { color: #FBF8FF; }
+
+.on-slide-filter #bootstrap pre { color: #9C8878; }
+.on-slide-filter #bootstrap pre .h-controller { color: #FBF8FF; }
+
+.on-slide-action #bootstrap pre { color: #9C8878; }
+.on-slide-action #bootstrap pre .h-action { color: #FBF8FF; }
+.on-slide-action #bootstrap pre .actionshow { display: inline; }
+.on-slide-action #bootstrap pre .httprequest { display: none; }
+
+#actionshow pre { color: #9C8878; }
+.on-slide-actionshow #actionshow .h-action { color: #FBF8FF; }
+
+.on-slide-model #actionshow .h-action { color:#CFCAAA;}
+.on-slide-model #actionshow .h-model { color:#FBF8FF;}
+
+.on-slide-exception #actionshow .h-action { color:#CFCAAA;}
+.on-slide-exception #actionshow .h-exception { color:#FBF8FF;}
+
+.on-slide-view #actionshow .h-action { color:#CFCAAA;}
+.on-slide-view #actionshow .h-view { color:#FBF8FF;}
+.on-slide-community #resources .medium { color: #FBF8FF}
+.on-slide-community #resources h3 { color: #FBF8FF}
+
+#resources h3 { color: #262E3B; }
+#resources .medium { color: #CFCAAA; }
+
+

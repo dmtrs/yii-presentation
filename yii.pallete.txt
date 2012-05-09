@@ -1,0 +1,22 @@
+bright {
+dark: #404040
+green: #92bf4e
+orange: #d95e32
+red: #d93223
+white: #f2f2f2
+}
+
+colorfull {
+blue: #1c71a6
+green: #92bf4e
+orange: #f29c50
+orange-brown: #d9653b
+white: #f2f2f2
+}
+
+muted {
+blue-light: #79b4d9
+green-light: #ccd96c
+orange-light: #f2af5c
+orange-brown-light: #e58541
+}
