@@ -65,13 +65,13 @@
     <ul class="small">
         <li>1.0, December 3, 2008</li>
         <li>1.1.0, January 10, 2010</li>
-        <li>2.0 Alpha verions, ~March 2012</li>
+        <li>2.0 Alpha verion, ~2012</li>
     </ul>
     <div class="slide" style="margin-top: 2em;">
         <h3>Development team</h3>
         <ul class="small">
             <li>7 members</li>
-            <li>~50 Translator (+15 languages)</li>
+            <li>~50 Translator<br>(+15 languages)</li>
         </ul>
     </div>
 </section>
@@ -130,37 +130,6 @@
     </div>
 </section>
 
-<section class="slide" id="actionshow">
-	<h2 class="invert">Show <span class="white">some code in</span> action</h2>
-    <pre>
-<span class="Type">class</span> PostController <span class="Type">extends</span> CController
-<span class="Special">{</span>
-    <span class="Type">public</span> <span class="PreProc">function</span> actionShow<span class="Special">(</span><span class="Statement">$</span><span class="Identifier">id</span><span class="Special">)</span>
-    <span class="Special">{</span>
-        <span class="Statement">$</span><span class="Identifier">model</span> <span class="Statement">=</span> Post<span class="Statement">::</span>model<span class="Special">()</span><span class="Type">-&gt;</span>findByPk<span class="Special">(</span><span class="Statement">$</span><span class="Identifier">id</span><span class="Special">)</span>;
-        <span class="Statement">if</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">model</span><span class="Statement">===</span><span class="Type">null</span><span class="Special">)</span>
-            <span class="Statement">throw</span> <span class="PreProc">new</span> CHttpException<span class="Special">(</span><span class="Constant">404</span>,'<span class="Constant">Oops!</span>'<span class="Special">)</span>;
-
-        <span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>render<span class="Special">(</span>'<span class="Constant">view</span>',<span class="Type">array</span><span class="Special">(</span>
-            '<span class="Constant">p</span>' <span class="Statement">=</span><span class="Statement">&gt;</span> <span class="Statement">$</span><span class="Identifier">model</span>
-        <span class="Special">))</span>;
-    <span class="Special">}</span>
-<span class="Special">}</span></pre>
-</section>
-
-<section class="slide" id="renderView">
-	<h2>View</h2>
-<pre>
-<span class="Identifier">&lt;</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><span class="Special">&lt;?php</span> <span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span><span class="Identifier">title</span>; <span class="Special">?&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">h2</span><span class="Identifier">&gt;</span>
-<span class="Special">&lt;?php</span>
-<span class="PreProc">echo</span> CHtml<span class="Statement">::</span><span class="Identifier">link</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span>author<span class="Type">-&gt;</span>name,<span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span>author<span class="Type">-&gt;</span>url<span class="Special">)</span>;
-
-<span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>beginWidget<span class="Special">(</span>'<span class="Constant">CMarkDown</span>'<span class="Special">)</span>;
-<span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">p</span><span class="Type">-&gt;</span><span class="Identifier">content</span>;
-<span class="Statement">$</span><span class="Identifier">this</span><span class="Type">-&gt;</span>endWidget<span class="Special">()</span>;
-</pre>
-</section>
-
 <section class="slide" id="community">
 	<h2>You will not be alone</h2>
     <div id="resources">
@@ -176,10 +145,23 @@
 <section class="slide" id="quotes">
     <h2>Quotes and stories</h2>
     <ul class="small">
-        <li>"Community is not a help desk"</li>
-        <li class="slide">"From svn to github"</li>
-        <li class="slide">"Dude, there not so many examples"</li>
-        <li class="slide">"Mass assigment hack on github"</li>
+        <li>Community is not a help desk</li>
+        <li class="slide">From svn to github</li>
+        <li class="slide">Dude, there are not so many examples</li>
+        <li class="slide">Mass assingment attack</li>
+    </ul>
+</section>
+
+<section class="slide" id="quotes">
+    <h2>Questions, Discussion, Flames</h2>
+    <ul class="heavy" style="margin-top:100px;height:250px;">
+        <li style="width:70px; margin: 0 auto;"`>?</li>
+    </ul>
+    <h2>Let's keep in touch</h2>
+    <ul class="small">
+        <li>@dmtrsslvdr</li>
+        <li>tydeas #yii</li>
+        <li>tydeas.dr@gmail.com</li>
     </ul>
 </section>
 
